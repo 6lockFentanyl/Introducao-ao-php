@@ -1,0 +1,24 @@
+<?php
+
+    $nome1 = readline("Qual o nome da 1ª pessoa? ");
+    $nome2 = readline("Qual o nome da 2ª pessoa? ");
+
+    
+    $comb = strtolower($nome1 . $nome2);
+    $valor = 0;
+    for ($i = 0; $i < strlen($comb); $i++) {
+        $valor += ord($comb[$i]);
+    }
+    
+
+    $porcentagem = $valor % 101;
+
+    if ($porcentagem > 85) {
+        print "🔥 Alma gêmea!\n";
+    } elseif ($porcentagem > 60 && $porcentagem < 85)  {
+        print "💞 Boa química!\n";
+    } elseif ($porcentagem > 40 && $porcentagem < 60) {
+        print "😅 Compatibilidade média.\n";
+    } else {
+        print "💔 Melhor como amigos.\n";
+    }
