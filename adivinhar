@@ -1,0 +1,26 @@
+<?php
+
+echo "Tente adivinhar qual o número correto de 0 à 100 com 10 tentativas\n";
+
+for ($i = 0; $i < 10; $i++){
+
+	$chute = (int) readline("Digite um número: ");
+
+	if ($chute == 22 && $i < 5){
+        	print("Parabéns, você acertou em menos de 10 tentativas!\n");
+		break;
+        } else if ($chute == 22 && $i >= 5 && $i < 7){
+                print("Boa! você acertou na " . $i + 1 . "ª tentativa!\n");
+                break;
+        } else if ($chute == 22 && $i >= 7){
+                print("Parabéns, você acertou na " . $i + 1 . "ª tentativa\n");
+                break;
+	} else if ($chute < 42 && $i < 9){
+        	print("tente novamente, o número é maior e restam " . 9 - $i . " tentativas\n");
+	} else if ($chute > 42 && $i < 9){
+                print("tente novamente, o número é menor e restam ' . 9 - $i . ' tentativas\n");
+	}
+
+}
+
+?>
